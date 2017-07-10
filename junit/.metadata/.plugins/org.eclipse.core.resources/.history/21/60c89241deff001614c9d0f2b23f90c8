@@ -1,0 +1,23 @@
+package test;
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+public class TestEvenodd {
+	int num=3;
+	Evenodd obj1=new Evenodd(num);
+	
+	@Before 
+	public void beforemsg()
+	{
+		System.out.println("got the number");
+	}
+	@Test
+	public void message()
+	{
+		System.out.println("No is even");
+	}
+
+}
+

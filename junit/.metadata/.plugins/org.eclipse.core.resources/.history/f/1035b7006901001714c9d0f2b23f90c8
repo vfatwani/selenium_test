@@ -1,0 +1,22 @@
+package test;
+
+public class PrimeNumber
+{
+	public boolean checker(int pn)
+	{
+		for (int i=2; i < (pn/2) ;i++ )
+		{
+			if(pn % i == 0)
+			{
+			return false;
+			}
+		}
+			return true;
+				
+		
+		}
+		
+				
+	}
+
+

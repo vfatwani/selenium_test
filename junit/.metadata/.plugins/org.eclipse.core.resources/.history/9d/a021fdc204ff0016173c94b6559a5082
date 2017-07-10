@@ -1,0 +1,28 @@
+package test;
+
+import org.junit.Test;
+
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+public class TestJunit {
+	
+   String message = "Hello World";	
+   MessageUtil messageUtil = new MessageUtil(message);
+
+   @Before
+   public void beforeMessage(){
+	   System.out.println("Before Test");
+   }
+   
+   @Test
+   public void testPrintMessage() {	  
+      assertEquals(message,messageUtil.printMessage());
+   }
+   
+   @After
+   public void afterMessage(){
+	   System.out.println("After Test");
+   }
+}

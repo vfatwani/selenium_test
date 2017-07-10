@@ -1,0 +1,28 @@
+package test;
+import org.junit.Test;
+import static org.junit.Assert.*;
+import org.junit.*;
+
+public class TestEvenodd {
+	int num1=2;
+	int num2=3;
+	Evenodd obj1=new Evenodd(num1);
+	Evenodd obj2=new Evenodd(num2);
+	String msg;
+	
+	
+	@Test
+	public void message() {
+		//msg=obj1.answer(num);
+		assertEquals("even", obj1.answer(num1));
+		//assertEquals("even",obj1.answer(num));
+		//assertEquals(obj1.answer(num),"even");
+	}
+	@Test
+	public void odd()
+	{
+		assertEquals("odd",obj2.answer(num2));
+	}
+
+}
+

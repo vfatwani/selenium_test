@@ -1,0 +1,19 @@
+package test;
+
+public class Evenodd 
+{
+int number;
+answer(number); 
+
+}
+public void answer(number)
+{
+	if((number/2)=0)
+	{
+		System.out.println("No is even");
+	}
+	else
+	{
+		System.out.println("No is odd");
+	}
+}

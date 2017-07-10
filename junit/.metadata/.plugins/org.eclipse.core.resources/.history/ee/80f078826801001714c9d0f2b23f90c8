@@ -1,0 +1,40 @@
+package test;
+
+import org.junit.runners.Parameterized;
+//import org.junit.runners.parameterized.*;
+import static org.junit.Assert.*;
+import org.junit.runner.RunWith;
+import org.junit.*;
+//import java.lang.*;
+
+@RunWith(Parameterized.class)
+public class PrimeNumberTest 
+{ 
+	private PrimeNumber primenb;
+	private boolean expected;
+	private int inputnb;
+	
+	@Before 
+	public void Beforecheck()
+	{
+		primenb=new PrimeNumber();
+	}
+	
+
+	@Test
+	public void prime()
+	{
+		inputnb=5;
+	 	assertEquals(expected,primenb.checker(inputnb));
+		System.out.println("is primenumber");
+	}
+	
+	@Test
+	public void notprime()
+	{ 
+		inputnb=4;
+		assertEquals(expected,primenb.checker(inputnb));
+		System.out.println("is not primenumber");
+	}
+	
+}

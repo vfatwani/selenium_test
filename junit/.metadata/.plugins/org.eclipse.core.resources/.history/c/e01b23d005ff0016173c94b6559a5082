@@ -1,0 +1,44 @@
+package test;
+
+import org.junit.Test;
+
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+public class TestJunit {
+	
+   String message1 = "Hello World";	
+   MessageUtil messageUtil1 = new MessageUtil(message1);
+   String message2 = "Hello Pisti";	
+   MessageUtil messageUtil2 = new MessageUtil(message2);
+   
+   @BeforeClass
+   public static void beforeClass(){
+	   System.out.println("Before Class");
+   }
+   @Before
+   public void beforeMessage(){
+	   System.out.println("Before Test");
+   }
+   
+   @Test
+   public void testPrintMessage1() {	  
+      assertEquals(message1,messageUtil1.printMessage());
+   }
+   
+   @Test
+   public void testPrintMessage2() {	  
+      assertEquals(message2,messageUtil2.printMessage());
+   }
+   
+   @After
+   public void afterMessage(){
+	   System.out.println("After Test");
+   }
+   
+   @AfterClass
+   public static void afterClass(){
+	   System.out.println("After Class");
+   }
+}
